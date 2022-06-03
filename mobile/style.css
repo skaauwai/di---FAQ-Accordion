@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+:root {
+  /*variables*/
+  --veryDarkGrayBlue: hsl(237, 12%, 33%);
+  --softRed: hsl(14, 88%, 65%);
+  --darkGrayBlue: hsl(240, 6%, 50%);
+  --lightGrayBlue: hsl(240, 5%, 91%);
+  --fontSize: 12px;
+}
+
+html {
+  font-size: var(--fontSize);
+}
+* {
+  max-width: 700px;
+}
+
+body {
+  margin: 0;
+  font-family: "Kumbh Sans", sans-serif;
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+  display: grid;
+  justify-content: center;
+  align-content: center;
+}
+
+.wrapper {
+  /*whole accordion*/
+  background: white;
+  border-radius: 25px;
+  width: 350px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 100px 1fr;
+  grid-gap: 0.5rem;
+  position: relative;
+  padding: 1rem;
+  height: 509px;
+  background-image: url(/images/bg-pattern-desktop.svg);
+  background-repeat: no-repeat;
+  background-position: 1260% 65%;
+}
+
+.image_wrapper {
+  position: relative;
+  background: url("/images/bg-pattern-mobile.svg");
+  background-repeat: no-repeat;
+  background-position: center, 590%;
+}
+
+.image_wrapper_inner {
+  position: absolute;
+  width: 237px;
+  height: 179px;
+  left: 69px;
+  top: -100px;
+  background-size: 72%;
+  background-position: center;
+  background: url(/images/illustration-woman-online-mobile.svg);
+  background-repeat: no-repeat;
+}
+
+.box {
+  position: absolute;
+  width: 55px;
+  left: 19%;
+  top: -30px;
+}
+
+.accordion_wrapper {
+  /*faq portion*/
+  margin-top: 0%px;
+  display: flex;
+  flex-direction: column;
+}
+
+.title_accordion {
+  font-size: 3rem;
+  margin-top: 0px;
+  text-align: center;
+}
+
+.questions_accordion {
+  height: 100;
+  display: flex;
+  flex-direction: column;
+}
+
+.question-answer_accordion {
+  width: 100%;
+  border-bottom: 1px solid #e8e8ea;
+}
+
+.question-answer_accordion > .answer {
+  display: none;
+}
+
+.question {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.question_text {
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin: 1.4rem 0 rem;
+  color: (var(--veryDarkGrayBlue));
+}
+
+.question img {
+  align-self: center;
+}
+
+.active > .answer {
+  display: block;
+  padding-bottom: 1.3rem;
+  color: var(--veryDarkGrayBlue);
+}
+
+.active img {
+  transform: rotate(180deg);
+  transition: all 0.3 ease-in;
+}
+
+.active h3 {
+  font-weight: 700;
+}
+
+.attribution {
+  display: none;
+}
