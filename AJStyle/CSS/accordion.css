@@ -1,0 +1,37 @@
+.accordion {
+  /*each accordion needs a divider
+    set bottom border*/
+  border-bottom: 1px solid var(--light-grayish-blue);
+  padding: 15px 0;
+}
+
+.accordion_title {
+  font-weight: 700;
+  color: var(--dark-blue);
+}
+.accordion_content {
+  color: var(--grayish-blue);
+  display: none;
+  line-height: 1.8rem;
+}
+.accordion_title::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  background: url(../images/icon...);
+  width: 10px;
+  height: 7px;
+  top: calc(50% - (7px / 2));
+}
+.accordion_open .accordion_content {
+  display: block;
+}
+
+.accordion_open .accordion_title {
+  margin-bottom: 9px;
+}
+.accordion_open .accordion @media (mind-width: 1020px) {
+  .accordions {
+    max-width: 40%;
+  }
+}

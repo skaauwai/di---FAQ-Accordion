@@ -1,0 +1,79 @@
+.card {
+  max-width: 920px;
+  margin: 148px 25 px 50px;
+  position: relative;
+  padding: 140px 25px 50px;
+  border-radius: 25px;
+  box-shadow: 0px 25px 10px rgba(0, 0, 0);
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  height: 150px;
+  width: 198px;
+
+  background-image: url(..//images) no repeat;
+  z-index: 2;
+}
+
+.card:: after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: calc(50% - (240px / 2));
+  width: 240px;
+  height: 104px;
+  background: url(../images/bg-pattern);
+  z-index: 1;
+}
+
+.card_title {
+  margin: 0, 0, 4px;
+  font-size: 3.2rem;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+@media (min-width: 650px) {
+
+    .card {
+        margin:   margin: 140px 25 px 50px;
+
+    }
+
+    .card::before {
+        --width: 
+        left: calc(50% = (235px /2));
+        width: 325px;
+        height: 245px;
+    }
+
+    @media (min-width: 1020px) {
+     body {
+         display: flex;
+         flex-direction: column;
+     }
+     
+        .card { 
+        min-width: 920px; 
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding: 75px 10% 20px;
+     }
+
+     .card.title {
+         text-align: left;
+         aligh-self: flex-end;
+     }
+     .card::before {
+         background-image: url(..images/ill..);
+         left: -20px;
+         top: calc(width: 472px;
+         height: 359px;)
+     }
+    }
+}
